@@ -1,0 +1,93 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>br.com.ratis</groupId>
+	<artifactId>core</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+	<name>core</name>
+	<url>http://maven.apache.org</url>
+
+
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<org.springframework.security-version>4.0.3.RELEASE</org.springframework.security-version>
+		<hibernate.version>4.3.11.Final</hibernate.version>
+		<com.fasterxml.jackson-version>2.6.5</com.fasterxml.jackson-version>
+	</properties>
+
+
+	<dependencies>
+
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.16.6</version>
+		</dependency>
+
+
+		<!-- Hibernate Core (For mapping entites with annotations) -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>${hibernate.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-validator</artifactId>
+			<version>5.2.4.Final</version>
+		</dependency>
+		<!-- End Hibernate Core -->
+		
+		<!-- Stella Caelum -->
+		<dependency>
+		    <groupId>br.com.caelum.stella</groupId>
+		    <artifactId>caelum-stella-core</artifactId>
+		    <version>2.1.2</version>
+		</dependency>
+		<dependency>
+		    <groupId>br.com.caelum.stella</groupId>
+		    <artifactId>caelum-stella-bean-validation</artifactId>
+		    <version>2.1.2</version>
+		</dependency>
+		<!-- End Stella Caelum -->
+
+		<!-- Spring Security Core (For implement entity User integrated with person) -->
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-core</artifactId>
+			<version>${org.springframework.security-version}</version>
+		</dependency>
+		<!-- End Spring Security Core -->
+
+		<!-- Jackson dependencies -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>${com.fasterxml.jackson-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-annotations</artifactId>
+			<version>${com.fasterxml.jackson-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-core</artifactId>
+			<version>${com.fasterxml.jackson-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.dataformat</groupId>
+			<artifactId>jackson-dataformat-xml</artifactId>
+			<version>${com.fasterxml.jackson-version}</version>
+		</dependency>
+		<!-- End Jackson dependencies -->
+
+	</dependencies>
+</project>
